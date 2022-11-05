@@ -1,0 +1,19 @@
+.wrapper {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  padding-top: 54px;
+  border-top: solid 1px var(--gray-400);
+}
+
+.clipboarIcon {
+  color: var(--gray-400);
+  
+}
+
+.text {
+  display: grid;
+  justify-items: center;
+  color: var(--gray-300);
+  font-size: 16;
+}
