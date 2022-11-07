@@ -7,22 +7,17 @@ import { EmptyList } from './components/EmptyList'
 
 import './global.css';
 import styles from './App.module.css';
-import { useState } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
 import { useEffect } from 'react';
 
 
-export function App(props) {
+export function App() {
 
   const [tasks, setTasks] = useState(
     [      
       {
         id: uuidv4(),
-        title: "riscar o texto das tasks concluídas",
-        isComplete: false
-      },
-      {
-        id: uuidv4(),
-        title: "mudar tudo pra ts",
+        title: "tirar a obrigatoriedade de ter uma task prévia pra o ngc funcionar",
         isComplete: false
       }
     ]
@@ -42,14 +37,14 @@ export function App(props) {
     catDoneTaskNumber();
   }, [tasks])
 
-  function handleCreateNewTask() {
+  function handleCreateNewTask(event: FormEvent) {
     event.preventDefault()
 
     setTasks([...tasks, { id: uuidv4(), title: newTaskText, isComplete: false }]);
     setNewTaskText('');
   }
 
-  function handleNewTaskInput() {
+  function handleNewTaskInput(event: ChangeEvent<HTMLTextAreaElement>) {
     setNewTaskText(event.target.value);
   }
 

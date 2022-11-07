@@ -23,7 +23,7 @@ export function Task({ title, onDeleteTask, id, onTaskDone, isComplete }:taskPro
     setCheckState(!checkState)
   }
 
-  function checkIcon(value) {
+  function checkIcon(value: boolean) {
     if (checkState == false) {
       return <Circle className={styles.circleIcon} size={22} weight="bold" />
     } else {
@@ -31,7 +31,7 @@ export function Task({ title, onDeleteTask, id, onTaskDone, isComplete }:taskPro
     }
   }
 
-  function textByState(value) {
+  function textByState(value: boolean) {
     if (checkState == false) {
       return (
         <p className={styles.text}>
@@ -49,7 +49,7 @@ export function Task({ title, onDeleteTask, id, onTaskDone, isComplete }:taskPro
 
   return (
     <div className={styles.task}>
-      <button title='Marcar como concluída' onClick={handleTaskDone} value={isComplete}>
+      <button title='Marcar como concluída' onClick={handleTaskDone} >
         {checkIcon(isComplete)}
       </button>
       {textByState(isComplete)}
