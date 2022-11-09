@@ -40,6 +40,7 @@
 
 .taskForm textarea:focus {
   color: var(--gray-100);
+  border: solid 1px var(--purple-500);
 }
 
 .taskForm button {
@@ -57,7 +58,7 @@
   transition: background-color 0.1s;
 }
 
-.taskForm button:not(:disabled):hover {
+.taskForm button:hover {
   background: var(--blue-200);
 }
 

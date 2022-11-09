@@ -17,7 +17,7 @@ export function App() {
     [      
       {
         id: uuidv4(),
-        title: "tirar a obrigatoriedade de ter uma task prévia pra o ngc funcionar",
+        title: "tirar a obrigatoriedade de começar o array com um objeto pra o ngc funcionar",
         isComplete: false
       }
     ]

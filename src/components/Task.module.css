@@ -45,7 +45,11 @@
 }
 
 .checkCircleIcon {
-  color: var(--purple-300);  
+  color: var(--purple-500);  
+}
+
+.checkCircleIcon:hover {
+  color: var(--purple-300)
 }
 
 .trashIcon {
